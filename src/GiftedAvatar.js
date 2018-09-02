@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { CachedImage } from 'react-native-cached-image';
+import FastImage from 'react-native-fast-image';
 import Color from './Color';
 
 const { carrot, emerald, peterRiver, wisteria, alizarin, turquoise, midnightBlue } = Color;
@@ -40,14 +40,14 @@ export default class GiftedAvatar extends React.PureComponent {
       return this.props.user.avatar();
     } else if (typeof this.props.user.avatar === 'string') {
       return (
-        <CachedImage
+        <FastImage
           source={{ uri: this.props.user.avatar }}
           style={[styles.avatarStyle, this.props.avatarStyle]}
         />
       );
     } else if (typeof this.props.user.avatar === 'number') {
       return (
-        <CachedImage
+        <FastImage
           source={this.props.user.avatar}
           style={[styles.avatarStyle, this.props.avatarStyle]}
         />
