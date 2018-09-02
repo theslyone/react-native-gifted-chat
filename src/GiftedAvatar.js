@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { CachedImage } from 'react-native-cached-image';
+import CachedImage from 'react-native-cached-image';
 import Color from './Color';
 
 const { carrot, emerald, peterRiver, wisteria, alizarin, turquoise, midnightBlue } = Color;
